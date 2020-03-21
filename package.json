@@ -1,0 +1,21 @@
+{
+  "name": "publish-algo",
+  "version": "0.1.0",
+  "description": "publishes a github backed algorithm on Algorithmia",
+  "main": "entrypoint.py",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algorithmiaio/publish-algo-action.git"
+  },
+  "keywords": [
+    "algorithmiaio",
+    "actions",
+    "Continuous Integration",
+    "Continuous Delivery",
+  ],
+  "author": "Algorithmia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/algorithmiaio/publish-algo-action/issues"
+  }
+}

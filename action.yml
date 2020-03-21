@@ -5,7 +5,7 @@ branding:
   icon: 'alert-circle'
   color: 'purple'
 inputs:
-  api_key:
+  mgmt_api_key:
     description: 'your Algorithmia Management API key'
     required: true
   api_address:
@@ -13,12 +13,12 @@ inputs:
     required: false
     default: 'https://api.algorithmia.com'
   algorithm_name:
-    description: 'The name of the Algorithm on Algorithmia'
+    description: 'The name of this Algorithm on Algorithmia'
     required: true
   version_schema:
-    description: 'Simple identifier to describe how to promote this release'
+    description: 'identifier to describe how to promote this release'
     required: false
-    default: "-.*.-"
+    default: "minor"
 
 runs:
   using: 'docker'
