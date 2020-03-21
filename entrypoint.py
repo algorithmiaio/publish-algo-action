@@ -4,7 +4,7 @@ import Algorithmia
 import os
 
 if __name__ == "__main__":
-    api_key = os.getenv("INPUT_API_KEY")
+    api_key = os.getenv("INPUT_MGMT_API_KEY")
     api_address = os.getenv("INPUT_API_ADDRESS")
     algo_name = os.getenv("INPUT_ALGORITHM_NAME")
     algo_schema = os.getenv("INPUT_VERSION_SCHEMA")

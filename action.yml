@@ -24,7 +24,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.api_key }}
+    - ${{ inputs.mgmt_api_key }}
     - ${{ inputs.api_address }}
     - ${{ inputs.algorithm_name }}
     - ${{ inputs.version_schema }}
