@@ -1,0 +1,30 @@
+# action.yml
+name: 'Algorithmia publish-algo'
+description: 'Programmatically publish a github backed algorithm to Algorithmia'
+branding:
+  icon: 'alert-circle'
+  color: 'purple'
+inputs:
+  api_key:
+    description: 'your Algorithmia Management API key'
+    required: true
+  api_address:
+    description: 'The API address for the Algorithmia Cluster you wish to connect to'
+    required: false
+    default: 'https://api.algorithmia.com'
+  algorithm_name:
+    description: 'The name of the Algorithm on Algorithmia'
+    required: true
+  version_schema:
+    description: 'Simple identifier to describe how to promote this release'
+    required: false
+    default: "-.*.-"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.api_key }}
+    - ${{ inputs.api_address }}
+    - ${{ inputs.algorithm_name }}
+    - ${{ inputs.version_schema }}
