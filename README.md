@@ -44,11 +44,8 @@ jobs:
     - name: Algorithmia publish-algo
       uses: algorithmiaio/publish-algo-action@v0.1.0-rc2
       with:
-        # your Algorithmia Management API key
-        api_key: YOUR_API_KEY_HERE
-        # The API address for the Algorithmia Cluster you wish to connect to
-        # The name of the Algorithm on Algorithmia
+        mgmt_api_key: {{ secrets.ALGO_MGMT_KEY }}
+	api_address: {{ screts.ALGORITHMIA_API_ADDRESS }}
         algorithm_name: zeryx/algorithmia_ci
-        # Simple identifier to describe how to promote this release
         version_schema: revision
 ```
